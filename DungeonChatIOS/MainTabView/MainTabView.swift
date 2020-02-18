@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MainTabView.swift
 //  DungeonChatIOS
 //
 //  Created by vorona.vyacheslav on 2020/02/18.
@@ -8,11 +8,16 @@
 
 import SwiftUI
 
-struct ContentView: View {
+protocol MainTabViewModelProtocol {
+    
+}
+
+struct MainTabView: View {
+    @ObservedObject var viewModel = MainTabViewModel()
     @State private var selection = 0
- 
+    
     var body: some View {
-        TabView(selection: $selection){
+        TabView(selection: $selection) {
             Text("First View")
                 .font(.title)
                 .tabItem {
@@ -35,8 +40,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainTabView()
     }
 }

@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		083A443623FBA60A001AC607 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A443523FBA60A001AC607 /* AppDelegate.swift */; };
 		083A443823FBA60A001AC607 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A443723FBA60A001AC607 /* SceneDelegate.swift */; };
-		083A443A23FBA60A001AC607 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A443923FBA60A001AC607 /* ContentView.swift */; };
 		083A443C23FBA60D001AC607 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 083A443B23FBA60D001AC607 /* Assets.xcassets */; };
 		083A443F23FBA60D001AC607 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 083A443E23FBA60D001AC607 /* Preview Assets.xcassets */; };
 		083A444223FBA60D001AC607 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 083A444023FBA60D001AC607 /* LaunchScreen.storyboard */; };
 		083A444D23FBA60D001AC607 /* DungeonChatIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A444C23FBA60D001AC607 /* DungeonChatIOSTests.swift */; };
+		083A445923FBAEBE001AC607 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A445823FBAEBE001AC607 /* MainTabView.swift */; };
+		083A445B23FBAF65001AC607 /* MainTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A445A23FBAF65001AC607 /* MainTabViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +31,6 @@
 		083A443223FBA60A001AC607 /* DungeonChatIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungeonChatIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		083A443523FBA60A001AC607 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		083A443723FBA60A001AC607 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		083A443923FBA60A001AC607 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		083A443B23FBA60D001AC607 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		083A443E23FBA60D001AC607 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		083A444123FBA60D001AC607 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +38,8 @@
 		083A444823FBA60D001AC607 /* DungeonChatIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DungeonChatIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		083A444C23FBA60D001AC607 /* DungeonChatIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonChatIOSTests.swift; sourceTree = "<group>"; };
 		083A444E23FBA60D001AC607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		083A445823FBAEBE001AC607 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		083A445A23FBAF65001AC607 /* MainTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +81,9 @@
 		083A443423FBA60A001AC607 /* DungeonChatIOS */ = {
 			isa = PBXGroup;
 			children = (
+				083A445723FBAE74001AC607 /* MainTabView */,
 				083A443523FBA60A001AC607 /* AppDelegate.swift */,
 				083A443723FBA60A001AC607 /* SceneDelegate.swift */,
-				083A443923FBA60A001AC607 /* ContentView.swift */,
 				083A443B23FBA60D001AC607 /* Assets.xcassets */,
 				083A444023FBA60D001AC607 /* LaunchScreen.storyboard */,
 				083A444323FBA60D001AC607 /* Info.plist */,
@@ -105,6 +107,15 @@
 				083A444E23FBA60D001AC607 /* Info.plist */,
 			);
 			path = DungeonChatIOSTests;
+			sourceTree = "<group>";
+		};
+		083A445723FBAE74001AC607 /* MainTabView */ = {
+			isa = PBXGroup;
+			children = (
+				083A445823FBAEBE001AC607 /* MainTabView.swift */,
+				083A445A23FBAF65001AC607 /* MainTabViewModel.swift */,
+			);
+			path = MainTabView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,8 +220,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				083A443623FBA60A001AC607 /* AppDelegate.swift in Sources */,
+				083A445B23FBAF65001AC607 /* MainTabViewModel.swift in Sources */,
 				083A443823FBA60A001AC607 /* SceneDelegate.swift in Sources */,
-				083A443A23FBA60A001AC607 /* ContentView.swift in Sources */,
+				083A445923FBAEBE001AC607 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
