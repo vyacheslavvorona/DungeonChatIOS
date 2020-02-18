@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		083A443623FBA60A001AC607 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A443523FBA60A001AC607 /* AppDelegate.swift */; };
+		083A443823FBA60A001AC607 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A443723FBA60A001AC607 /* SceneDelegate.swift */; };
+		083A443A23FBA60A001AC607 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A443923FBA60A001AC607 /* ContentView.swift */; };
+		083A443C23FBA60D001AC607 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 083A443B23FBA60D001AC607 /* Assets.xcassets */; };
+		083A443F23FBA60D001AC607 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 083A443E23FBA60D001AC607 /* Preview Assets.xcassets */; };
+		083A444223FBA60D001AC607 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 083A444023FBA60D001AC607 /* LaunchScreen.storyboard */; };
+		083A444D23FBA60D001AC607 /* DungeonChatIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A444C23FBA60D001AC607 /* DungeonChatIOSTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		083A444923FBA60D001AC607 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 083A442A23FBA60A001AC607 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 083A443123FBA60A001AC607;
+			remoteInfo = DungeonChatIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		083A443223FBA60A001AC607 /* DungeonChatIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungeonChatIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		083A443523FBA60A001AC607 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		083A443723FBA60A001AC607 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		083A443923FBA60A001AC607 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		083A443B23FBA60D001AC607 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		083A443E23FBA60D001AC607 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		083A444123FBA60D001AC607 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		083A444323FBA60D001AC607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		083A444823FBA60D001AC607 /* DungeonChatIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DungeonChatIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		083A444C23FBA60D001AC607 /* DungeonChatIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonChatIOSTests.swift; sourceTree = "<group>"; };
+		083A444E23FBA60D001AC607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		083A442F23FBA60A001AC607 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		083A444523FBA60D001AC607 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		083A442923FBA60A001AC607 = {
+			isa = PBXGroup;
+			children = (
+				083A443423FBA60A001AC607 /* DungeonChatIOS */,
+				083A444B23FBA60D001AC607 /* DungeonChatIOSTests */,
+				083A443323FBA60A001AC607 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		083A443323FBA60A001AC607 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				083A443223FBA60A001AC607 /* DungeonChatIOS.app */,
+				083A444823FBA60D001AC607 /* DungeonChatIOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		083A443423FBA60A001AC607 /* DungeonChatIOS */ = {
+			isa = PBXGroup;
+			children = (
+				083A443523FBA60A001AC607 /* AppDelegate.swift */,
+				083A443723FBA60A001AC607 /* SceneDelegate.swift */,
+				083A443923FBA60A001AC607 /* ContentView.swift */,
+				083A443B23FBA60D001AC607 /* Assets.xcassets */,
+				083A444023FBA60D001AC607 /* LaunchScreen.storyboard */,
+				083A444323FBA60D001AC607 /* Info.plist */,
+				083A443D23FBA60D001AC607 /* Preview Content */,
+			);
+			path = DungeonChatIOS;
+			sourceTree = "<group>";
+		};
+		083A443D23FBA60D001AC607 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				083A443E23FBA60D001AC607 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		083A444B23FBA60D001AC607 /* DungeonChatIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				083A444C23FBA60D001AC607 /* DungeonChatIOSTests.swift */,
+				083A444E23FBA60D001AC607 /* Info.plist */,
+			);
+			path = DungeonChatIOSTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		083A443123FBA60A001AC607 /* DungeonChatIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 083A445123FBA60D001AC607 /* Build configuration list for PBXNativeTarget "DungeonChatIOS" */;
+			buildPhases = (
+				083A442E23FBA60A001AC607 /* Sources */,
+				083A442F23FBA60A001AC607 /* Frameworks */,
+				083A443023FBA60A001AC607 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DungeonChatIOS;
+			productName = DungeonChatIOS;
+			productReference = 083A443223FBA60A001AC607 /* DungeonChatIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		083A444723FBA60D001AC607 /* DungeonChatIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 083A445423FBA60D001AC607 /* Build configuration list for PBXNativeTarget "DungeonChatIOSTests" */;
+			buildPhases = (
+				083A444423FBA60D001AC607 /* Sources */,
+				083A444523FBA60D001AC607 /* Frameworks */,
+				083A444623FBA60D001AC607 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				083A444A23FBA60D001AC607 /* PBXTargetDependency */,
+			);
+			name = DungeonChatIOSTests;
+			productName = DungeonChatIOSTests;
+			productReference = 083A444823FBA60D001AC607 /* DungeonChatIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		083A442A23FBA60A001AC607 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = vorona.vyacheslav;
+				TargetAttributes = {
+					083A443123FBA60A001AC607 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					083A444723FBA60D001AC607 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 083A443123FBA60A001AC607;
+					};
+				};
+			};
+			buildConfigurationList = 083A442D23FBA60A001AC607 /* Build configuration list for PBXProject "DungeonChatIOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 083A442923FBA60A001AC607;
+			productRefGroup = 083A443323FBA60A001AC607 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				083A443123FBA60A001AC607 /* DungeonChatIOS */,
+				083A444723FBA60D001AC607 /* DungeonChatIOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		083A443023FBA60A001AC607 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				083A444223FBA60D001AC607 /* LaunchScreen.storyboard in Resources */,
+				083A443F23FBA60D001AC607 /* Preview Assets.xcassets in Resources */,
+				083A443C23FBA60D001AC607 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		083A444623FBA60D001AC607 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		083A442E23FBA60A001AC607 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				083A443623FBA60A001AC607 /* AppDelegate.swift in Sources */,
+				083A443823FBA60A001AC607 /* SceneDelegate.swift in Sources */,
+				083A443A23FBA60A001AC607 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		083A444423FBA60D001AC607 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				083A444D23FBA60D001AC607 /* DungeonChatIOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		083A444A23FBA60D001AC607 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 083A443123FBA60A001AC607 /* DungeonChatIOS */;
+			targetProxy = 083A444923FBA60D001AC607 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		083A444023FBA60D001AC607 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				083A444123FBA60D001AC607 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		083A444F23FBA60D001AC607 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		083A445023FBA60D001AC607 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		083A445223FBA60D001AC607 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"DungeonChatIOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 625PLSLCT7;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = DungeonChatIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vorona.DungeonChatIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		083A445323FBA60D001AC607 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"DungeonChatIOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 625PLSLCT7;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = DungeonChatIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vorona.DungeonChatIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		083A445523FBA60D001AC607 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 625PLSLCT7;
+				INFOPLIST_FILE = DungeonChatIOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vorona.DungeonChatIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DungeonChatIOS.app/DungeonChatIOS";
+			};
+			name = Debug;
+		};
+		083A445623FBA60D001AC607 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 625PLSLCT7;
+				INFOPLIST_FILE = DungeonChatIOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vorona.DungeonChatIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DungeonChatIOS.app/DungeonChatIOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		083A442D23FBA60A001AC607 /* Build configuration list for PBXProject "DungeonChatIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				083A444F23FBA60D001AC607 /* Debug */,
+				083A445023FBA60D001AC607 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		083A445123FBA60D001AC607 /* Build configuration list for PBXNativeTarget "DungeonChatIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				083A445223FBA60D001AC607 /* Debug */,
+				083A445323FBA60D001AC607 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		083A445423FBA60D001AC607 /* Build configuration list for PBXNativeTarget "DungeonChatIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				083A445523FBA60D001AC607 /* Debug */,
+				083A445623FBA60D001AC607 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 083A442A23FBA60A001AC607 /* Project object */;
+}
