@@ -8,12 +8,12 @@
 
 import SwiftUI
 
-protocol MainTabViewModelProtocol {
+protocol MainTabViewModelProtocol: ObservableObject {
     
 }
 
-struct MainTabView: View {
-    @ObservedObject var viewModel = MainTabViewModel()
+struct MainTabView<ViewModel: MainTabViewModelProtocol>: View {
+    @ObservedObject var viewModel: ViewModel
     @State private var selection = 0
     
     var body: some View {
@@ -40,8 +40,11 @@ struct MainTabView: View {
     }
 }
 
+#if DEBUG
+// MARK: - Previews
 struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
-        MainTabView()
+        MainTabView(viewModel: MainTabViewModel())
     }
 }
+#endif

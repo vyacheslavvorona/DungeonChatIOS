@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "DungeonChatCore",
+        "repositoryURL": "https://github.com/vyacheslavvorona/DungeonChatCore.git",
+        "state": {
+          "branch": "master",
+          "revision": "7236349d67944f0cf38f156317cb8d0b56e46b5d",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

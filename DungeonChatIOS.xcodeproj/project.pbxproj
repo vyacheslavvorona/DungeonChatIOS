@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		083A444D23FBA60D001AC607 /* DungeonChatIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A444C23FBA60D001AC607 /* DungeonChatIOSTests.swift */; };
 		083A445923FBAEBE001AC607 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A445823FBAEBE001AC607 /* MainTabView.swift */; };
 		083A445B23FBAF65001AC607 /* MainTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A445A23FBAF65001AC607 /* MainTabViewModel.swift */; };
+		083A445E23FBC8A8001AC607 /* DungeonChatCore in Frameworks */ = {isa = PBXBuildFile; productRef = 083A445D23FBC8A8001AC607 /* DungeonChatCore */; };
+		083A46BF23FBC918001AC607 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A46BE23FBC918001AC607 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,7 @@
 		083A444E23FBA60D001AC607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		083A445823FBAEBE001AC607 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		083A445A23FBAF65001AC607 /* MainTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewModel.swift; sourceTree = "<group>"; };
+		083A46BE23FBC918001AC607 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				083A445E23FBC8A8001AC607 /* DungeonChatCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +85,8 @@
 		083A443423FBA60A001AC607 /* DungeonChatIOS */ = {
 			isa = PBXGroup;
 			children = (
+				083A46D823FBED80001AC607 /* Extensions */,
+				083A445F23FBC8DE001AC607 /* Models */,
 				083A445723FBAE74001AC607 /* MainTabView */,
 				083A443523FBA60A001AC607 /* AppDelegate.swift */,
 				083A443723FBA60A001AC607 /* SceneDelegate.swift */,
@@ -118,6 +124,29 @@
 			path = MainTabView;
 			sourceTree = "<group>";
 		};
+		083A445F23FBC8DE001AC607 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				083A46BD23FBC8F7001AC607 /* Core Models */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		083A46BD23FBC8F7001AC607 /* Core Models */ = {
+			isa = PBXGroup;
+			children = (
+				083A46BE23FBC918001AC607 /* User.swift */,
+			);
+			path = "Core Models";
+			sourceTree = "<group>";
+		};
+		083A46D823FBED80001AC607 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +163,9 @@
 			dependencies = (
 			);
 			name = DungeonChatIOS;
+			packageProductDependencies = (
+				083A445D23FBC8A8001AC607 /* DungeonChatCore */,
+			);
 			productName = DungeonChatIOS;
 			productReference = 083A443223FBA60A001AC607 /* DungeonChatIOS.app */;
 			productType = "com.apple.product-type.application";
@@ -184,6 +216,9 @@
 				Base,
 			);
 			mainGroup = 083A442923FBA60A001AC607;
+			packageReferences = (
+				083A445C23FBC8A8001AC607 /* XCRemoteSwiftPackageReference "DungeonChatCore" */,
+			);
 			productRefGroup = 083A443323FBA60A001AC607 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -222,6 +257,7 @@
 				083A443623FBA60A001AC607 /* AppDelegate.swift in Sources */,
 				083A445B23FBAF65001AC607 /* MainTabViewModel.swift in Sources */,
 				083A443823FBA60A001AC607 /* SceneDelegate.swift in Sources */,
+				083A46BF23FBC918001AC607 /* User.swift in Sources */,
 				083A445923FBAEBE001AC607 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,6 +521,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		083A445C23FBC8A8001AC607 /* XCRemoteSwiftPackageReference "DungeonChatCore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vyacheslavvorona/DungeonChatCore.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		083A445D23FBC8A8001AC607 /* DungeonChatCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 083A445C23FBC8A8001AC607 /* XCRemoteSwiftPackageReference "DungeonChatCore" */;
+			productName = DungeonChatCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 083A442A23FBA60A001AC607 /* Project object */;
 }
