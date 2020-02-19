@@ -17,6 +17,8 @@
 		083A445B23FBAF65001AC607 /* MainTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A445A23FBAF65001AC607 /* MainTabViewModel.swift */; };
 		083A445E23FBC8A8001AC607 /* DungeonChatCore in Frameworks */ = {isa = PBXBuildFile; productRef = 083A445D23FBC8A8001AC607 /* DungeonChatCore */; };
 		083A46BF23FBC918001AC607 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A46BE23FBC918001AC607 /* User.swift */; };
+		083A493B23FCBBF9001AC607 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A493A23FCBBF9001AC607 /* LoginViewModel.swift */; };
+		083A493D23FCBC0F001AC607 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A493C23FCBC0F001AC607 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		083A445823FBAEBE001AC607 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		083A445A23FBAF65001AC607 /* MainTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewModel.swift; sourceTree = "<group>"; };
 		083A46BE23FBC918001AC607 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		083A493A23FCBBF9001AC607 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		083A493C23FCBC0F001AC607 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +89,9 @@
 		083A443423FBA60A001AC607 /* DungeonChatIOS */ = {
 			isa = PBXGroup;
 			children = (
+				083A493823FCBBCC001AC607 /* Modules */,
 				083A46D823FBED80001AC607 /* Extensions */,
 				083A445F23FBC8DE001AC607 /* Models */,
-				083A445723FBAE74001AC607 /* MainTabView */,
 				083A443523FBA60A001AC607 /* AppDelegate.swift */,
 				083A443723FBA60A001AC607 /* SceneDelegate.swift */,
 				083A443B23FBA60D001AC607 /* Assets.xcassets */,
@@ -145,6 +149,24 @@
 			children = (
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		083A493823FCBBCC001AC607 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				083A493923FCBBDB001AC607 /* LoginView */,
+				083A445723FBAE74001AC607 /* MainTabView */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		083A493923FCBBDB001AC607 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				083A493A23FCBBF9001AC607 /* LoginViewModel.swift */,
+				083A493C23FCBC0F001AC607 /* LoginView.swift */,
+			);
+			path = LoginView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,7 +277,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				083A443623FBA60A001AC607 /* AppDelegate.swift in Sources */,
+				083A493D23FCBC0F001AC607 /* LoginView.swift in Sources */,
 				083A445B23FBAF65001AC607 /* MainTabViewModel.swift in Sources */,
+				083A493B23FCBBF9001AC607 /* LoginViewModel.swift in Sources */,
 				083A443823FBA60A001AC607 /* SceneDelegate.swift in Sources */,
 				083A46BF23FBC918001AC607 /* User.swift in Sources */,
 				083A445923FBAEBE001AC607 /* MainTabView.swift in Sources */,

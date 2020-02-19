@@ -8,6 +8,6 @@
 
 import Combine
 
-class MainTabViewModel: MainTabViewModelProtocol {
+final class MainTabViewModel: MainTabViewModelProtocol {
     
 }

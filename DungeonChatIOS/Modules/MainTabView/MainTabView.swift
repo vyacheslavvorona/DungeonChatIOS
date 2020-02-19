@@ -8,10 +8,12 @@
 
 import SwiftUI
 
+// MARK: - MainTabViewModelProtocol
 protocol MainTabViewModelProtocol: ObservableObject {
     
 }
 
+// MARK: - MainTabView
 struct MainTabView<ViewModel: MainTabViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
     @State private var selection = 0
