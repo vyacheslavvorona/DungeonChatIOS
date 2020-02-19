@@ -19,6 +19,11 @@
 		083A46BF23FBC918001AC607 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A46BE23FBC918001AC607 /* User.swift */; };
 		083A493B23FCBBF9001AC607 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A493A23FCBBF9001AC607 /* LoginViewModel.swift */; };
 		083A493D23FCBC0F001AC607 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A493C23FCBC0F001AC607 /* LoginView.swift */; };
+		083A4B9D23FCD4AA001AC607 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 083A4B9C23FCD4AA001AC607 /* Alamofire */; };
+		083A4BA023FCDB2B001AC607 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 083A4B9F23FCDB2B001AC607 /* Realm */; };
+		083A4BA223FCDB2B001AC607 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 083A4BA123FCDB2B001AC607 /* RealmSwift */; };
+		083A4BA523FCEEBF001AC607 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A4BA423FCEEBF001AC607 /* NetworkManager.swift */; };
+		083A506223FD30A9001AC607 /* DungeonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A506123FD30A8001AC607 /* DungeonError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,8 @@
 		083A46BE23FBC918001AC607 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		083A493A23FCBBF9001AC607 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		083A493C23FCBC0F001AC607 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		083A4BA423FCEEBF001AC607 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		083A506123FD30A8001AC607 /* DungeonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +61,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				083A4BA223FCDB2B001AC607 /* RealmSwift in Frameworks */,
+				083A4BA023FCDB2B001AC607 /* Realm in Frameworks */,
 				083A445E23FBC8A8001AC607 /* DungeonChatCore in Frameworks */,
+				083A4B9D23FCD4AA001AC607 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +99,7 @@
 		083A443423FBA60A001AC607 /* DungeonChatIOS */ = {
 			isa = PBXGroup;
 			children = (
+				083A4BA323FCEEAE001AC607 /* Services */,
 				083A493823FCBBCC001AC607 /* Modules */,
 				083A46D823FBED80001AC607 /* Extensions */,
 				083A445F23FBC8DE001AC607 /* Models */,
@@ -132,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				083A46BD23FBC8F7001AC607 /* Core Models */,
+				083A506123FD30A8001AC607 /* DungeonError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -169,6 +181,14 @@
 			path = LoginView;
 			sourceTree = "<group>";
 		};
+		083A4BA323FCEEAE001AC607 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				083A4BA423FCEEBF001AC607 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -187,6 +207,9 @@
 			name = DungeonChatIOS;
 			packageProductDependencies = (
 				083A445D23FBC8A8001AC607 /* DungeonChatCore */,
+				083A4B9C23FCD4AA001AC607 /* Alamofire */,
+				083A4B9F23FCDB2B001AC607 /* Realm */,
+				083A4BA123FCDB2B001AC607 /* RealmSwift */,
 			);
 			productName = DungeonChatIOS;
 			productReference = 083A443223FBA60A001AC607 /* DungeonChatIOS.app */;
@@ -240,6 +263,8 @@
 			mainGroup = 083A442923FBA60A001AC607;
 			packageReferences = (
 				083A445C23FBC8A8001AC607 /* XCRemoteSwiftPackageReference "DungeonChatCore" */,
+				083A4B9B23FCD4AA001AC607 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				083A4B9E23FCDB2B001AC607 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 083A443323FBA60A001AC607 /* Products */;
 			projectDirPath = "";
@@ -282,6 +307,8 @@
 				083A493B23FCBBF9001AC607 /* LoginViewModel.swift in Sources */,
 				083A443823FBA60A001AC607 /* SceneDelegate.swift in Sources */,
 				083A46BF23FBC918001AC607 /* User.swift in Sources */,
+				083A4BA523FCEEBF001AC607 /* NetworkManager.swift in Sources */,
+				083A506223FD30A9001AC607 /* DungeonError.swift in Sources */,
 				083A445923FBAEBE001AC607 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,6 +582,22 @@
 				kind = branch;
 			};
 		};
+		083A4B9B23FCD4AA001AC607 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		083A4B9E23FCDB2B001AC607 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -562,6 +605,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 083A445C23FBC8A8001AC607 /* XCRemoteSwiftPackageReference "DungeonChatCore" */;
 			productName = DungeonChatCore;
+		};
+		083A4B9C23FCD4AA001AC607 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 083A4B9B23FCD4AA001AC607 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		083A4B9F23FCDB2B001AC607 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 083A4B9E23FCDB2B001AC607 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		083A4BA123FCDB2B001AC607 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 083A4B9E23FCDB2B001AC607 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
