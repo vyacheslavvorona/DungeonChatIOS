@@ -8,29 +8,16 @@
 
 import Combine
 import RealmSwift
+import DungeonChatCore
 
 final class LoginViewModel: LoginViewModelProtocol {
     
-    
-}
-
-class BindableResults<Element>: ObservableObject where Element: RealmSwift.RealmCollectionValue {
-
-    var results: Results<Element>
-    private var token: NotificationToken!
-
-    init(results: Results<Element>) {
-        self.results = results
-        lateInit()
-    }
-
-    func lateInit() {
-        token = results.observe { [weak self] _ in
-            self?.objectWillChange.send()
-        }
-    }
-
-    deinit {
-        token.invalidate()
+    init() {
+        
+        NetworkManager.post(.registerUser, parameters: User(email: "some@email.com"))
+            .map { (value: UserContent) -> Int in
+                
+            }
+            
     }
 }

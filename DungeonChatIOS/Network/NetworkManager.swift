@@ -21,6 +21,10 @@ fileprivate struct Response<T> {
     let response: URLResponse
 }
 
+fileprivate struct Empty: Encodable {
+   static let instance: Empty? = nil
+}
+
 // MARK: - NetworkManager
 enum NetworkManager {
     
@@ -111,5 +115,45 @@ extension NetworkManager {
         queue: DispatchQueue = DispatchQueue.global(qos: .default)
     ) -> AnyPublisher<Result, Error> {
         return request(api.url, method: .delete, parameters: parameters, encoder: encoder, decoder: decoder, queue: queue)
+    }
+}
+
+// Without parameters argument
+extension NetworkManager {
+    
+    static func get<Result: Decodable>(
+        _ api: APIRoutes,
+        encoder: JSONEncoder = JSONEncoder(),
+        decoder: JSONDecoder = JSONDecoder(),
+        queue: DispatchQueue = DispatchQueue.global(qos: .default)
+    ) -> AnyPublisher<Result, Error> {
+        return request(api.url, method: .get, parameters: Empty.instance, encoder: encoder, decoder: decoder, queue: queue)
+    }
+    
+    static func post<Result: Decodable>(
+        _ api: APIRoutes,
+        encoder: JSONEncoder = JSONEncoder(),
+        decoder: JSONDecoder = JSONDecoder(),
+        queue: DispatchQueue = DispatchQueue.global(qos: .default)
+    ) -> AnyPublisher<Result, Error> {
+        return request(api.url, method: .post, parameters: Empty.instance, encoder: encoder, decoder: decoder, queue: queue)
+    }
+    
+    static func put<Result: Decodable>(
+        _ api: APIRoutes,
+        encoder: JSONEncoder = JSONEncoder(),
+        decoder: JSONDecoder = JSONDecoder(),
+        queue: DispatchQueue = DispatchQueue.global(qos: .default)
+    ) -> AnyPublisher<Result, Error> {
+        return request(api.url, method: .put, parameters: Empty.instance, encoder: encoder, decoder: decoder, queue: queue)
+    }
+    
+    static func delete<Result: Decodable>(
+        _ api: APIRoutes,
+        encoder: JSONEncoder = JSONEncoder(),
+        decoder: JSONDecoder = JSONDecoder(),
+        queue: DispatchQueue = DispatchQueue.global(qos: .default)
+    ) -> AnyPublisher<Result, Error> {
+        return request(api.url, method: .delete, parameters: Empty.instance, encoder: encoder, decoder: decoder, queue: queue)
     }
 }
