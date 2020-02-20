@@ -21,6 +21,7 @@ fileprivate struct Response<T> {
     let response: URLResponse
 }
 
+// MARK: - NetworkManager
 enum NetworkManager {
     
     private static func request<Parameters: Encodable, T: Decodable>(
@@ -56,7 +57,6 @@ enum NetworkManager {
         decoder: JSONDecoder,
         queue: DispatchQueue
     ) -> AnyPublisher<Result, Error> {
-        
         return request(url: url, method: method, parameters: parameters, encoder: encoder, decoder: decoder, queue: queue)
             .tryMap { (response: Response<Result>) -> Result in
                 if let httpResponse = response.response as? HTTPURLResponse,
@@ -66,5 +66,50 @@ enum NetworkManager {
                 return response.value
             }
             .eraseToAnyPublisher()
+    }
+}
+
+// MARK: - REST boilerplate
+
+extension NetworkManager {
+    
+    static func get<Parameters: Encodable, Result: Decodable>(
+        _ api: APIRoutes,
+        parameters: Parameters? = nil,
+        encoder: JSONEncoder = JSONEncoder(),
+        decoder: JSONDecoder = JSONDecoder(),
+        queue: DispatchQueue = DispatchQueue.global(qos: .default)
+    ) -> AnyPublisher<Result, Error> {
+        return request(api.url, method: .get, parameters: parameters, encoder: encoder, decoder: decoder, queue: queue)
+    }
+    
+    static func post<Parameters: Encodable, Result: Decodable>(
+        _ api: APIRoutes,
+        parameters: Parameters? = nil,
+        encoder: JSONEncoder = JSONEncoder(),
+        decoder: JSONDecoder = JSONDecoder(),
+        queue: DispatchQueue = DispatchQueue.global(qos: .default)
+    ) -> AnyPublisher<Result, Error> {
+        return request(api.url, method: .post, parameters: parameters, encoder: encoder, decoder: decoder, queue: queue)
+    }
+    
+    static func put<Parameters: Encodable, Result: Decodable>(
+        _ api: APIRoutes,
+        parameters: Parameters? = nil,
+        encoder: JSONEncoder = JSONEncoder(),
+        decoder: JSONDecoder = JSONDecoder(),
+        queue: DispatchQueue = DispatchQueue.global(qos: .default)
+    ) -> AnyPublisher<Result, Error> {
+        return request(api.url, method: .put, parameters: parameters, encoder: encoder, decoder: decoder, queue: queue)
+    }
+    
+    static func delete<Parameters: Encodable, Result: Decodable>(
+        _ api: APIRoutes,
+        parameters: Parameters? = nil,
+        encoder: JSONEncoder = JSONEncoder(),
+        decoder: JSONDecoder = JSONDecoder(),
+        queue: DispatchQueue = DispatchQueue.global(qos: .default)
+    ) -> AnyPublisher<Result, Error> {
+        return request(api.url, method: .delete, parameters: parameters, encoder: encoder, decoder: decoder, queue: queue)
     }
 }

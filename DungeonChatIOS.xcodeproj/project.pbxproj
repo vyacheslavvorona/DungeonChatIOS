@@ -23,6 +23,10 @@
 		083A4BA223FCDB2B001AC607 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 083A4BA123FCDB2B001AC607 /* RealmSwift */; };
 		083A4BA523FCEEBF001AC607 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A4BA423FCEEBF001AC607 /* NetworkManager.swift */; };
 		083A506223FD30A9001AC607 /* DungeonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A506123FD30A8001AC607 /* DungeonError.swift */; };
+		08C5252823FE75A700AD2EB3 /* APIRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C5252723FE75A700AD2EB3 /* APIRoutes.swift */; };
+		08C5278723FE77DF00AD2EB3 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C5278623FE77DF00AD2EB3 /* Array.swift */; };
+		08C5278A23FE79D200AD2EB3 /* DungeonRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C5278923FE79D200AD2EB3 /* DungeonRoutes.swift */; };
+		08C5278C23FE7D6400AD2EB3 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C5278B23FE7D6400AD2EB3 /* Int.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		083A493C23FCBC0F001AC607 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		083A4BA423FCEEBF001AC607 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		083A506123FD30A8001AC607 /* DungeonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonError.swift; sourceTree = "<group>"; };
+		08C5252723FE75A700AD2EB3 /* APIRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRoutes.swift; sourceTree = "<group>"; };
+		08C5278623FE77DF00AD2EB3 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		08C5278923FE79D200AD2EB3 /* DungeonRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonRoutes.swift; sourceTree = "<group>"; };
+		08C5278B23FE7D6400AD2EB3 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +105,7 @@
 		083A443423FBA60A001AC607 /* DungeonChatIOS */ = {
 			isa = PBXGroup;
 			children = (
-				083A4BA323FCEEAE001AC607 /* Services */,
+				083A4BA323FCEEAE001AC607 /* Network */,
 				083A493823FCBBCC001AC607 /* Modules */,
 				083A46D823FBED80001AC607 /* Extensions */,
 				083A445F23FBC8DE001AC607 /* Models */,
@@ -157,6 +165,9 @@
 		083A46D823FBED80001AC607 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				08C5278623FE77DF00AD2EB3 /* Array.swift */,
+				08C5278923FE79D200AD2EB3 /* DungeonRoutes.swift */,
+				08C5278B23FE7D6400AD2EB3 /* Int.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -179,12 +190,13 @@
 			path = LoginView;
 			sourceTree = "<group>";
 		};
-		083A4BA323FCEEAE001AC607 /* Services */ = {
+		083A4BA323FCEEAE001AC607 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				083A4BA423FCEEBF001AC607 /* NetworkManager.swift */,
+				08C5252723FE75A700AD2EB3 /* APIRoutes.swift */,
 			);
-			path = Services;
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,13 +310,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				083A443623FBA60A001AC607 /* AppDelegate.swift in Sources */,
+				08C5278C23FE7D6400AD2EB3 /* Int.swift in Sources */,
 				083A493D23FCBC0F001AC607 /* LoginView.swift in Sources */,
 				083A445B23FBAF65001AC607 /* MainTabViewModel.swift in Sources */,
 				083A493B23FCBBF9001AC607 /* LoginViewModel.swift in Sources */,
 				083A443823FBA60A001AC607 /* SceneDelegate.swift in Sources */,
 				083A46BF23FBC918001AC607 /* User.swift in Sources */,
+				08C5278723FE77DF00AD2EB3 /* Array.swift in Sources */,
 				083A4BA523FCEEBF001AC607 /* NetworkManager.swift in Sources */,
+				08C5278A23FE79D200AD2EB3 /* DungeonRoutes.swift in Sources */,
 				083A506223FD30A9001AC607 /* DungeonError.swift in Sources */,
+				08C5252823FE75A700AD2EB3 /* APIRoutes.swift in Sources */,
 				083A445923FBAEBE001AC607 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
