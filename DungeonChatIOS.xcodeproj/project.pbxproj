@@ -19,7 +19,6 @@
 		083A46BF23FBC918001AC607 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A46BE23FBC918001AC607 /* User.swift */; };
 		083A493B23FCBBF9001AC607 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A493A23FCBBF9001AC607 /* LoginViewModel.swift */; };
 		083A493D23FCBC0F001AC607 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A493C23FCBC0F001AC607 /* LoginView.swift */; };
-		083A4B9D23FCD4AA001AC607 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 083A4B9C23FCD4AA001AC607 /* Alamofire */; };
 		083A4BA023FCDB2B001AC607 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 083A4B9F23FCDB2B001AC607 /* Realm */; };
 		083A4BA223FCDB2B001AC607 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 083A4BA123FCDB2B001AC607 /* RealmSwift */; };
 		083A4BA523FCEEBF001AC607 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A4BA423FCEEBF001AC607 /* NetworkManager.swift */; };
@@ -64,7 +63,6 @@
 				083A4BA223FCDB2B001AC607 /* RealmSwift in Frameworks */,
 				083A4BA023FCDB2B001AC607 /* Realm in Frameworks */,
 				083A445E23FBC8A8001AC607 /* DungeonChatCore in Frameworks */,
-				083A4B9D23FCD4AA001AC607 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,7 +205,6 @@
 			name = DungeonChatIOS;
 			packageProductDependencies = (
 				083A445D23FBC8A8001AC607 /* DungeonChatCore */,
-				083A4B9C23FCD4AA001AC607 /* Alamofire */,
 				083A4B9F23FCDB2B001AC607 /* Realm */,
 				083A4BA123FCDB2B001AC607 /* RealmSwift */,
 			);
@@ -263,7 +260,6 @@
 			mainGroup = 083A442923FBA60A001AC607;
 			packageReferences = (
 				083A445C23FBC8A8001AC607 /* XCRemoteSwiftPackageReference "DungeonChatCore" */,
-				083A4B9B23FCD4AA001AC607 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				083A4B9E23FCDB2B001AC607 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 083A443323FBA60A001AC607 /* Products */;
@@ -582,14 +578,6 @@
 				kind = branch;
 			};
 		};
-		083A4B9B23FCD4AA001AC607 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
 		083A4B9E23FCDB2B001AC607 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa.git";
@@ -605,11 +593,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 083A445C23FBC8A8001AC607 /* XCRemoteSwiftPackageReference "DungeonChatCore" */;
 			productName = DungeonChatCore;
-		};
-		083A4B9C23FCD4AA001AC607 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 083A4B9B23FCD4AA001AC607 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
 		};
 		083A4B9F23FCDB2B001AC607 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -7,94 +7,64 @@
 //
 
 import Foundation
-import Alamofire
 import Combine
+
+fileprivate enum HTTPMethod: String {
+    case get = "GET"
+    case post = "POST"
+    case put = "PUT"
+    case delete = "DELETE"
+}
+
+fileprivate struct Response<T> {
+    let value: T
+    let response: URLResponse
+}
 
 enum NetworkManager {
     
-    private static var session: Session {
-        Session.default
-    }
-    
-//    private static func dataRequest<Parameters: Encodable>(
-//        _ url: URL,
-//        method: HTTPMethod,
-//        parameters: Parameters? = nil,
-//        encoder: ParameterEncoder,
-//        headers: HTTPHeaders? = nil,
-//        interceptor: RequestInterceptor? = nil,
-//        dispatchQueue: DispatchQueue = .global(qos: .default)
-//    ) -> Future<Data, Error> {
-//        return Future<Data, Error> { promise in
-//            session.request(
-//                url,
-//                method: method,
-//                parameters: parameters,
-//                encoder: encoder,
-//                headers: headers,
-//                interceptor: interceptor
-//            ).response (queue: dispatchQueue) { dataResponse in
-//                if let data = dataResponse.data {
-//                    promise(.success(data))
-//                } else if let error = dataResponse.error {
-//                    promise(.failure(error))
-//                } else {
-//                    promise(.failure(DungeonError.api()))
-//                }
-//            }
-//        }
-//    }
-    
-    private static func dataRequest<Parameters: Encodable>(
-        _ url: URL,
+    private static func request<Parameters: Encodable, T: Decodable>(
+        url: URL,
         method: HTTPMethod,
-        parameters: Parameters? = nil,
-        encoder: ParameterEncoder,
-        headers: HTTPHeaders? = nil,
-        interceptor: RequestInterceptor? = nil
-    ) -> Future<DataRequest, Error> {
-        return Future<DataRequest, Error> { promise in
-            promise(.success(session.request(
-                url,
-                method: method,
-                parameters: parameters,
-                encoder: encoder,
-                headers: headers,
-                interceptor: interceptor
-            )))
+        parameters: Parameters?,
+        encoder: JSONEncoder,
+        decoder: JSONDecoder,
+        queue: DispatchQueue
+    ) -> AnyPublisher<Response<T>, Error> {
+        var request = URLRequest(url: url)
+        request.httpMethod = method.rawValue
+        if let jsonData = try? encoder.encode(parameters) {
+            request.httpBody = jsonData
+        } else if parameters != nil {
+            NSLog("Failed to encode HTTPBody parameters:", parameters.debugDescription)
         }
-    }
-    
-    private static func request<Parameters: Encodable>(
-        _ url: URL,
-        method: HTTPMethod,
-        parameters: Parameters? = nil,
-        encoder: ParameterEncoder,
-        headers: HTTPHeaders? = nil,
-        interceptor: RequestInterceptor? = nil,
-        dispatchQueue: DispatchQueue = .global(qos: .default)
-    ) -> Future<Decodable, Error> {
-        return dataRequest(
-            url,
-            method: method,
-            parameters: parameters,
-            encoder: encoder,
-            headers: headers,
-            interceptor: interceptor
-        ).flatMap { dataResponse -> Future<Decodable, Error> in
-            
-            if let data = dataResponse.data {
-                promise(.success(data))
-            } else if let error = dataResponse.error {
-                promise(.failure(error))
-            } else {
-                promise(.failure(DungeonError.api()))
+        return URLSession.shared
+            .dataTaskPublisher(for: request)
+            .tryMap { result -> Response<T> in
+                let value = try decoder.decode(T.self, from: result.data)
+                return Response(value: value, response: result.response)
             }
-        }
+            .receive(on: queue)
+            .eraseToAnyPublisher()
     }
     
-    static func asdads() {
-        let request = URLRequest(url: <#T##URLConvertible#>, method: <#T##HTTPMethod#>, headers: <#T##HTTPHeaders?#>)
-        URLSession.shared.dataTaskPublisher(for: <#T##URLRequest#>)
+    private static func request<Parameters: Encodable, Result: Decodable>(
+        _ url: URL,
+        method: HTTPMethod,
+        parameters: Parameters?,
+        encoder: JSONEncoder,
+        decoder: JSONDecoder,
+        queue: DispatchQueue
+    ) -> AnyPublisher<Result, Error> {
+        
+        return request(url: url, method: method, parameters: parameters, encoder: encoder, decoder: decoder, queue: queue)
+            .tryMap { (response: Response<Result>) -> Result in
+                if let httpResponse = response.response as? HTTPURLResponse,
+                    !(200..<300).contains(httpResponse.statusCode) {
+                    throw DungeonError.api(code: httpResponse.statusCode)
+                }
+                return response.value
+            }
+            .eraseToAnyPublisher()
     }
 }
