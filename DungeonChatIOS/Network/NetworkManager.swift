@@ -38,6 +38,7 @@ enum NetworkManager {
     ) -> AnyPublisher<Response<T>, Error> {
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         if let jsonData = try? encoder.encode(parameters) {
             request.httpBody = jsonData
         } else if parameters != nil {
@@ -81,7 +82,7 @@ extension NetworkManager {
         _ api: APIRoutes,
         parameters: Parameters? = nil,
         encoder: JSONEncoder = JSONEncoder(),
-        decoder: JSONDecoder = JSONDecoder(),
+        decoder: JSONDecoder = JSONDecoder.iso8601,
         queue: DispatchQueue = DispatchQueue.global(qos: .default)
     ) -> AnyPublisher<Result, Error> {
         return request(api.url, method: .get, parameters: parameters, encoder: encoder, decoder: decoder, queue: queue)
@@ -91,7 +92,7 @@ extension NetworkManager {
         _ api: APIRoutes,
         parameters: Parameters? = nil,
         encoder: JSONEncoder = JSONEncoder(),
-        decoder: JSONDecoder = JSONDecoder(),
+        decoder: JSONDecoder = JSONDecoder.iso8601,
         queue: DispatchQueue = DispatchQueue.global(qos: .default)
     ) -> AnyPublisher<Result, Error> {
         return request(api.url, method: .post, parameters: parameters, encoder: encoder, decoder: decoder, queue: queue)
@@ -101,7 +102,7 @@ extension NetworkManager {
         _ api: APIRoutes,
         parameters: Parameters? = nil,
         encoder: JSONEncoder = JSONEncoder(),
-        decoder: JSONDecoder = JSONDecoder(),
+        decoder: JSONDecoder = JSONDecoder.iso8601,
         queue: DispatchQueue = DispatchQueue.global(qos: .default)
     ) -> AnyPublisher<Result, Error> {
         return request(api.url, method: .put, parameters: parameters, encoder: encoder, decoder: decoder, queue: queue)
@@ -111,7 +112,7 @@ extension NetworkManager {
         _ api: APIRoutes,
         parameters: Parameters? = nil,
         encoder: JSONEncoder = JSONEncoder(),
-        decoder: JSONDecoder = JSONDecoder(),
+        decoder: JSONDecoder = JSONDecoder.iso8601,
         queue: DispatchQueue = DispatchQueue.global(qos: .default)
     ) -> AnyPublisher<Result, Error> {
         return request(api.url, method: .delete, parameters: parameters, encoder: encoder, decoder: decoder, queue: queue)
@@ -124,7 +125,7 @@ extension NetworkManager {
     static func get<Result: Decodable>(
         _ api: APIRoutes,
         encoder: JSONEncoder = JSONEncoder(),
-        decoder: JSONDecoder = JSONDecoder(),
+        decoder: JSONDecoder = JSONDecoder.iso8601,
         queue: DispatchQueue = DispatchQueue.global(qos: .default)
     ) -> AnyPublisher<Result, Error> {
         return request(api.url, method: .get, parameters: Empty.instance, encoder: encoder, decoder: decoder, queue: queue)
@@ -133,7 +134,7 @@ extension NetworkManager {
     static func post<Result: Decodable>(
         _ api: APIRoutes,
         encoder: JSONEncoder = JSONEncoder(),
-        decoder: JSONDecoder = JSONDecoder(),
+        decoder: JSONDecoder = JSONDecoder.iso8601,
         queue: DispatchQueue = DispatchQueue.global(qos: .default)
     ) -> AnyPublisher<Result, Error> {
         return request(api.url, method: .post, parameters: Empty.instance, encoder: encoder, decoder: decoder, queue: queue)
@@ -142,7 +143,7 @@ extension NetworkManager {
     static func put<Result: Decodable>(
         _ api: APIRoutes,
         encoder: JSONEncoder = JSONEncoder(),
-        decoder: JSONDecoder = JSONDecoder(),
+        decoder: JSONDecoder = JSONDecoder.iso8601,
         queue: DispatchQueue = DispatchQueue.global(qos: .default)
     ) -> AnyPublisher<Result, Error> {
         return request(api.url, method: .put, parameters: Empty.instance, encoder: encoder, decoder: decoder, queue: queue)
@@ -151,7 +152,7 @@ extension NetworkManager {
     static func delete<Result: Decodable>(
         _ api: APIRoutes,
         encoder: JSONEncoder = JSONEncoder(),
-        decoder: JSONDecoder = JSONDecoder(),
+        decoder: JSONDecoder = JSONDecoder.iso8601,
         queue: DispatchQueue = DispatchQueue.global(qos: .default)
     ) -> AnyPublisher<Result, Error> {
         return request(api.url, method: .delete, parameters: Empty.instance, encoder: encoder, decoder: decoder, queue: queue)

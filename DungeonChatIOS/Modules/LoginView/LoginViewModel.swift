@@ -14,7 +14,7 @@ final class LoginViewModel: LoginViewModelProtocol {
     private var cancelables = Set<AnyCancellable>()
     
     init() {
-        let user = UserContent(email: "ios1@user.com", password: "mupass11")
+        let user = UserContent(email: "ios3@user.com", password: "mupass11")
         NetworkManager.post(.registerUser, parameters: user)
             .sink(receiveCompletion: { someCrap in
                 print(someCrap)
