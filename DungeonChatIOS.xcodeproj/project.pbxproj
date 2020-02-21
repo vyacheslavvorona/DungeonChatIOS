@@ -15,7 +15,6 @@
 		083A444D23FBA60D001AC607 /* DungeonChatIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A444C23FBA60D001AC607 /* DungeonChatIOSTests.swift */; };
 		083A445923FBAEBE001AC607 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A445823FBAEBE001AC607 /* MainTabView.swift */; };
 		083A445B23FBAF65001AC607 /* MainTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A445A23FBAF65001AC607 /* MainTabViewModel.swift */; };
-		083A445E23FBC8A8001AC607 /* DungeonChatCore in Frameworks */ = {isa = PBXBuildFile; productRef = 083A445D23FBC8A8001AC607 /* DungeonChatCore */; };
 		083A46BF23FBC918001AC607 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A46BE23FBC918001AC607 /* User.swift */; };
 		083A493B23FCBBF9001AC607 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A493A23FCBBF9001AC607 /* LoginViewModel.swift */; };
 		083A493D23FCBC0F001AC607 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A493C23FCBC0F001AC607 /* LoginView.swift */; };
@@ -23,6 +22,7 @@
 		083A4BA223FCDB2B001AC607 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 083A4BA123FCDB2B001AC607 /* RealmSwift */; };
 		083A4BA523FCEEBF001AC607 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A4BA423FCEEBF001AC607 /* NetworkManager.swift */; };
 		083A506223FD30A9001AC607 /* DungeonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083A506123FD30A8001AC607 /* DungeonError.swift */; };
+		0870F67423FFA3080055C96F /* DungeonChatCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0870F67323FFA3080055C96F /* DungeonChatCore */; };
 		08C5252823FE75A700AD2EB3 /* APIRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C5252723FE75A700AD2EB3 /* APIRoutes.swift */; };
 		08C5278723FE77DF00AD2EB3 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C5278623FE77DF00AD2EB3 /* Array.swift */; };
 		08C5278A23FE79D200AD2EB3 /* DungeonRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C5278923FE79D200AD2EB3 /* DungeonRoutes.swift */; };
@@ -69,8 +69,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				083A4BA223FCDB2B001AC607 /* RealmSwift in Frameworks */,
+				0870F67423FFA3080055C96F /* DungeonChatCore in Frameworks */,
 				083A4BA023FCDB2B001AC607 /* Realm in Frameworks */,
-				083A445E23FBC8A8001AC607 /* DungeonChatCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,9 +216,9 @@
 			);
 			name = DungeonChatIOS;
 			packageProductDependencies = (
-				083A445D23FBC8A8001AC607 /* DungeonChatCore */,
 				083A4B9F23FCDB2B001AC607 /* Realm */,
 				083A4BA123FCDB2B001AC607 /* RealmSwift */,
+				0870F67323FFA3080055C96F /* DungeonChatCore */,
 			);
 			productName = DungeonChatIOS;
 			productReference = 083A443223FBA60A001AC607 /* DungeonChatIOS.app */;
@@ -271,8 +271,8 @@
 			);
 			mainGroup = 083A442923FBA60A001AC607;
 			packageReferences = (
-				083A445C23FBC8A8001AC607 /* XCRemoteSwiftPackageReference "DungeonChatCore" */,
 				083A4B9E23FCDB2B001AC607 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				0870F67223FFA3080055C96F /* XCRemoteSwiftPackageReference "DungeonChatCore" */,
 			);
 			productRefGroup = 083A443323FBA60A001AC607 /* Products */;
 			projectDirPath = "";
@@ -586,14 +586,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		083A445C23FBC8A8001AC607 /* XCRemoteSwiftPackageReference "DungeonChatCore" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/vyacheslavvorona/DungeonChatCore.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		083A4B9E23FCDB2B001AC607 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa.git";
@@ -602,14 +594,17 @@
 				minimumVersion = 4.3.2;
 			};
 		};
+		0870F67223FFA3080055C96F /* XCRemoteSwiftPackageReference "DungeonChatCore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vyacheslavvorona/DungeonChatCore.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		083A445D23FBC8A8001AC607 /* DungeonChatCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 083A445C23FBC8A8001AC607 /* XCRemoteSwiftPackageReference "DungeonChatCore" */;
-			productName = DungeonChatCore;
-		};
 		083A4B9F23FCDB2B001AC607 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 083A4B9E23FCDB2B001AC607 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
@@ -619,6 +614,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 083A4B9E23FCDB2B001AC607 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
+		};
+		0870F67323FFA3080055C96F /* DungeonChatCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0870F67223FFA3080055C96F /* XCRemoteSwiftPackageReference "DungeonChatCore" */;
+			productName = DungeonChatCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

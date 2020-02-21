@@ -28,6 +28,9 @@ enum APIRoutes {
     }
     
     var url: URL {
-        URL(fileURLWithPath: urlString)
+        guard let url = URL(string: urlString) else {
+            fatalError("Unable to compose API url")
+        }
+        return url
     }
 }
