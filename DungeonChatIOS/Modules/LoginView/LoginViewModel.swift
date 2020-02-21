@@ -14,12 +14,22 @@ final class LoginViewModel: LoginViewModelProtocol {
     private var cancelables = Set<AnyCancellable>()
     
     init() {
-        let user = UserContent(email: "ios4@user.com", password: "mupass11")
-        NetworkManager.post(.registerUser, parameters: user)
+        
+        User.register(with: UserContent(email: "ios8@user.com", password: "mupass11"))
             .sink(receiveCompletion: { someCrap in
                 print(someCrap)
             }) { (user: UserContent) in
+                print("User registration")
                 print(user)
+            }
+            .store(in: &cancelables)
+        
+        User.login(with: UserContent(email: "ios6@user.com", password: "mupass11"))
+            .sink(receiveCompletion: { someCrap in
+                print(someCrap)
+            }) { (token: AuthToken) in
+                print("User login")
+                print(token)
             }
             .store(in: &cancelables)
     }

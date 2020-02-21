@@ -11,7 +11,7 @@ import DungeonChatCore
 
 enum APIRoutes {
     
-    case registerUser
+    case register
     case login
     
     private static var baseURL: String {
@@ -20,7 +20,7 @@ enum APIRoutes {
     
     private var urlString: String {
         switch self {
-        case .registerUser:
+        case .register:
             return APIRoutes.baseURL + DungeonRoutes.User.userRegistration
         case .login:
             return APIRoutes.baseURL + DungeonRoutes.User.userLogin

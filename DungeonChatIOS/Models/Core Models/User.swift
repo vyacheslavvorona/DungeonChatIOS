@@ -8,6 +8,7 @@
 
 import DungeonChatCore
 import Foundation
+import Combine
 
 class User: SharedUser {
     var id: Int?
@@ -27,3 +28,15 @@ class User: SharedUser {
     }
 }
 
+// MARK: - API calls
+
+extension User {
+    
+    static func register(with content: UserContent) -> AnyPublisher<UserContent, Error> {
+        NetworkManager.post(.register, parameters: content)
+    }
+    
+    static func login(with content: UserContent) -> AnyPublisher<AuthToken, Error> {
+        NetworkManager.post(.login, parameters: content)
+    }
+}
