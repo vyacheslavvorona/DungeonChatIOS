@@ -9,4 +9,6 @@
 enum DungeonError: Error {
     case api(code: Int? = nil, message: String = "Unknown")
     case coding(message: String = "Unable to encode/decode")
+    
+    case unknown
 }

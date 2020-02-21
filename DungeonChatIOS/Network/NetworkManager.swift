@@ -8,6 +8,7 @@
 
 import Foundation
 import Combine
+import DungeonChatCore
 
 fileprivate enum HTTPMethod: String {
     case get = "GET"
@@ -47,8 +48,14 @@ enum NetworkManager {
         return URLSession.shared
             .dataTaskPublisher(for: request)
             .tryMap { result -> Response<T> in
-                let value = try decoder.decode(T.self, from: result.data)
-                return Response(value: value, response: result.response)
+                if let httpResponse = result.response as? HTTPURLResponse,
+                    !(200..<300).contains(httpResponse.statusCode) {
+                    let middlewareError = try? decoder.decode(ErrorMiddlewareContent.self, from: result.data)
+                    throw DungeonError.api(code: httpResponse.statusCode, message: middlewareError?.reason ?? "Unknown reason")
+                } else if let value = try? decoder.decode(T.self, from: result.data) {
+                    return Response(value: value, response: result.response)
+                }
+                throw DungeonError.coding(message: "Unable to decode response")
             }
             .receive(on: queue)
             .eraseToAnyPublisher()
@@ -63,13 +70,7 @@ enum NetworkManager {
         queue: DispatchQueue
     ) -> AnyPublisher<Result, Error> {
         return request(url: url, method: method, parameters: parameters, encoder: encoder, decoder: decoder, queue: queue)
-            .tryMap { (response: Response<Result>) -> Result in
-                if let httpResponse = response.response as? HTTPURLResponse,
-                    !(200..<300).contains(httpResponse.statusCode) {
-                    throw DungeonError.api(code: httpResponse.statusCode)
-                }
-                return response.value
-            }
+            .map { (response: Response<Result>) -> Result in response.value }
             .eraseToAnyPublisher()
     }
 }
