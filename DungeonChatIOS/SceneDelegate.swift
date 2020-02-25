@@ -23,8 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
 //            let mainTabView = MainTabView(viewModel: MainTabViewModel())
-            let loginView = LoginView(viewModel: LoginViewModel())
-            window.rootViewController = UIHostingController(rootView: loginView)
+            let registerView = RegisterView(viewModel: RegisterViewModel())
+            window.rootViewController = UIHostingController(rootView: registerView)
             self.window = window
             window.makeKeyAndVisible()
         }

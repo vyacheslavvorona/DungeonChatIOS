@@ -25,6 +25,8 @@
 		0870F67423FFA3080055C96F /* DungeonChatCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0870F67323FFA3080055C96F /* DungeonChatCore */; };
 		0870F67823FFC31E0055C96F /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870F67723FFC31E0055C96F /* JSONDecoder.swift */; };
 		0870FB3823FFD4C30055C96F /* AuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870FB3723FFD4C30055C96F /* AuthToken.swift */; };
+		0870FB3B2404A3DC0055C96F /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870FB3A2404A3DC0055C96F /* RegisterView.swift */; };
+		0870FB3D2404A3F50055C96F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0870FB3C2404A3F50055C96F /* RegisterViewModel.swift */; };
 		08C5252823FE75A700AD2EB3 /* APIRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C5252723FE75A700AD2EB3 /* APIRoutes.swift */; };
 		08C5278723FE77DF00AD2EB3 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C5278623FE77DF00AD2EB3 /* Array.swift */; };
 		08C5278A23FE79D200AD2EB3 /* DungeonRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C5278923FE79D200AD2EB3 /* DungeonRoutes.swift */; };
@@ -61,6 +63,8 @@
 		083A506123FD30A8001AC607 /* DungeonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonError.swift; sourceTree = "<group>"; };
 		0870F67723FFC31E0055C96F /* JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
 		0870FB3723FFD4C30055C96F /* AuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthToken.swift; sourceTree = "<group>"; };
+		0870FB3A2404A3DC0055C96F /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		0870FB3C2404A3F50055C96F /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		08C5252723FE75A700AD2EB3 /* APIRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRoutes.swift; sourceTree = "<group>"; };
 		08C5278623FE77DF00AD2EB3 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		08C5278923FE79D200AD2EB3 /* DungeonRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonRoutes.swift; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 		083A493823FCBBCC001AC607 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0870FB392404A3B40055C96F /* RegisterView */,
 				083A493923FCBBDB001AC607 /* LoginView */,
 				083A445723FBAE74001AC607 /* MainTabView */,
 			);
@@ -190,8 +195,8 @@
 		083A493923FCBBDB001AC607 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
-				083A493A23FCBBF9001AC607 /* LoginViewModel.swift */,
 				083A493C23FCBC0F001AC607 /* LoginView.swift */,
+				083A493A23FCBBF9001AC607 /* LoginViewModel.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -203,6 +208,15 @@
 				08C5252723FE75A700AD2EB3 /* APIRoutes.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		0870FB392404A3B40055C96F /* RegisterView */ = {
+			isa = PBXGroup;
+			children = (
+				0870FB3A2404A3DC0055C96F /* RegisterView.swift */,
+				0870FB3C2404A3F50055C96F /* RegisterViewModel.swift */,
+			);
+			path = RegisterView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,10 +338,12 @@
 				0870F67823FFC31E0055C96F /* JSONDecoder.swift in Sources */,
 				083A46BF23FBC918001AC607 /* User.swift in Sources */,
 				0870FB3823FFD4C30055C96F /* AuthToken.swift in Sources */,
+				0870FB3D2404A3F50055C96F /* RegisterViewModel.swift in Sources */,
 				08C5278723FE77DF00AD2EB3 /* Array.swift in Sources */,
 				083A4BA523FCEEBF001AC607 /* NetworkManager.swift in Sources */,
 				08C5278A23FE79D200AD2EB3 /* DungeonRoutes.swift in Sources */,
 				083A506223FD30A9001AC607 /* DungeonError.swift in Sources */,
+				0870FB3B2404A3DC0055C96F /* RegisterView.swift in Sources */,
 				08C5252823FE75A700AD2EB3 /* APIRoutes.swift in Sources */,
 				083A445923FBAEBE001AC607 /* MainTabView.swift in Sources */,
 			);
