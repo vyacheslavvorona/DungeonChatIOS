@@ -16,14 +16,14 @@ final class RegisterViewModel: ObservableObject, Identifiable, RegisterViewModel
     @Published var email: String = ""
     @Published var password: String = ""
     
-    lazy var register: () -> Void = { [unowned self] in
-        User.register(with: UserContent(email: self.email, password: self.password))
+    func register() {
+        User.register(with: UserContent(email: email, password: password))
             .sink(receiveCompletion: { someCrap in
                 print(someCrap)
             }) { (user: UserContent) in
                 print("User registration")
                 print(user)
             }
-        .store(in: &self.cancelables)
+        .store(in: &cancelables)
     }
 }

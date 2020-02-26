@@ -12,7 +12,7 @@ protocol RegisterViewModelProtocol {
     var email: String { get }
     var password: String { get }
     
-    var register: () -> Void { get }
+    func register()
 }
 
 // MARK: - RegisterView
